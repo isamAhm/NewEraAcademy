@@ -57,7 +57,7 @@ export function Hero({
 
       <HeroSparkles />
 
-      <div className="relative mx-auto flex min-h-[560px] max-w-6xl flex-col justify-center px-4 py-16 sm:min-h-[620px] sm:px-6 lg:min-h-[680px]">
+      <div className="relative mx-auto flex min-h-[420px] max-w-6xl flex-col justify-center px-4 py-16 sm:min-h-[460px] sm:px-6 lg:min-h-[500px]">
         <div className="max-w-2xl">
           {title && (
             <h1 className="font-heading text-3xl font-semibold leading-tight text-white drop-shadow-sm sm:text-4xl lg:text-5xl">

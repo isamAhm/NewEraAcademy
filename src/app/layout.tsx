@@ -60,6 +60,16 @@ export default function RootLayout({
           Skip to main content
         </a>
         <SiteHeader />
+
+        {/* School name banner - similar to Lucky Academy */}
+        <div className="bg-gradient-to-r from-brand-blue to-brand-purple py-3">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <p className="text-center font-heading text-lg font-semibold tracking-widest text-white uppercase">
+              New Era Academy
+            </p>
+          </div>
+        </div>
+
         <main id="main-content" className="flex-1">
           <PageTransition>{children}</PageTransition>
         </main>

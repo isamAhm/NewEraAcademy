@@ -13,13 +13,13 @@ export function Logo({ compact = false }: { compact?: boolean }) {
       className="group flex items-center gap-3 rounded-sm"
       aria-label={`${siteConfig.name} — home`}
     >
-      <div className="relative h-12 w-12 shrink-0 transition-transform duration-200 group-hover:-translate-y-0.5 sm:h-14 sm:w-14">
+      <div className="relative h-16 w-16 shrink-0 transition-transform duration-200 group-hover:-translate-y-0.5 sm:h-20 sm:w-20">
         <Image
           src="/images/logo.png"
           alt="New Era Academy Logo"
           fill
           className="object-contain"
-          sizes="(max-width: 640px) 48px, 56px"
+          sizes="(max-width: 640px) 64px, 80px"
         />
       </div>
       <span className="flex flex-col leading-tight">
