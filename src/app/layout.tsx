@@ -97,9 +97,9 @@ export default function RootLayout({
         <SiteHeader />
 
         {/* School name banner - similar to Lucky Academy */}
-        <div className="bg-gradient-to-r from-brand-blue to-brand-purple py-3">
+        <div className="bg-gradient-to-r from-[#E5DCEA] via-[#D0FAE4] to-brand-purple py-3">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <p className="text-center font-heading text-lg font-semibold tracking-widest text-white uppercase">
+            <p className="text-center font-heading text-lg font-semibold tracking-widest text-brand-blue uppercase">
               New Era Academy
             </p>
           </div>
