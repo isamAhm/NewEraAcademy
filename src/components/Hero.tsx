@@ -2,6 +2,7 @@ import Image from "next/image";
 import { CtaLink } from "@/components/CtaButton";
 import { TrustBadges } from "@/components/TrustBadges";
 import { HeroSparkles } from "@/components/HeroSparkles";
+import { WavyBottom } from "@/components/WavyBottom";
 
 type HeroProps = {
   as?: "h1" | "h2";
@@ -53,6 +54,12 @@ export function Hero({
       <div
         aria-hidden="true"
         className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent"
+      />
+
+      {/* Wavy bottom design */}
+      <WavyBottom
+        color="#ffffff"
+        className="z-20"
       />
 
       <HeroSparkles />

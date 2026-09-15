@@ -62,9 +62,8 @@ export function HeroSparkles() {
       {SPARKLES.map((sparkle, index) => (
         <SparkleIcon
           key={index}
-          className={`hero-sparkle absolute drop-shadow-[0_1px_3px_rgba(0,0,0,0.45)] ${sparkle.position} ${sparkle.size} ${sparkle.color} ${
-            isVisible ? "is-visible" : ""
-          }`}
+          className={`hero-sparkle absolute drop-shadow-[0_1px_3px_rgba(0,0,0,0.45)] ${sparkle.position} ${sparkle.size} ${sparkle.color} ${isVisible ? "is-visible" : ""
+            }`}
           style={{ "--sparkle-delay": sparkle.delay } as CSSProperties}
         />
       ))}
