@@ -1,63 +1,29 @@
-import { BusIcon, ShieldIcon, CurriculumIcon } from "@/components/icons/BadgeIcons";
-import type { ComponentType } from "react";
-
-type Badge = {
-  label: string;
-  Icon: ComponentType<{ className?: string }>;
-  ring: string;
-  iconColor: string;
-};
-
-const badges: Badge[] = [
-  {
-    label: "Transportation Included",
-    Icon: BusIcon,
-    ring: "bg-brand-teal-light",
-    iconColor: "text-brand-teal",
-  },
-  {
-    label: "Safety First Approach",
-    Icon: ShieldIcon,
-    ring: "bg-brand-purple-light",
-    iconColor: "text-brand-purple",
-  },
-  {
-    label: "Specialized Curriculum Options",
-    Icon: CurriculumIcon,
-    ring: "bg-brand-magenta-light",
-    iconColor: "text-brand-magenta",
-  },
-];
+import Image from "next/image";
 
 /**
- * Three custom circular trust badges built from the brand palette + simple
- * line icons (no clip-art seals). `tone="onDark"` switches the labels to
- * white for use over the hero photo; the circles keep their brand colors.
+ * Three professional trust badges featuring Transportation Included,
+ * Safety First Approach, and Specialized Curriculum Options.
+ * Uses the official badge design with orange and navy blue styling.
  */
 export function TrustBadges({
   className = "",
-  tone = "onLight",
+  tone = "onLight"
 }: {
   className?: string;
   tone?: "onLight" | "onDark";
 }) {
-  const labelColor = tone === "onDark" ? "text-white" : "text-ink";
   return (
-    <ul
-      className={`flex flex-wrap items-start justify-center gap-x-8 gap-y-6 sm:justify-start ${className}`}
-    >
-      {badges.map(({ label, Icon, ring, iconColor }) => (
-        <li key={label} className="flex w-24 flex-col items-center gap-2 text-center sm:w-28">
-          <span
-            className={`flex h-16 w-16 items-center justify-center rounded-full sm:h-20 sm:w-20 ${ring}`}
-          >
-            <Icon className={`h-8 w-8 sm:h-9 sm:w-9 ${iconColor}`} />
-          </span>
-          <span className={`text-xs font-semibold leading-snug sm:text-sm ${labelColor}`}>
-            {label}
-          </span>
-        </li>
-      ))}
-    </ul>
+    <div className={`flex justify-center sm:justify-start ${className}`}>
+      <div className="relative w-full max-w-md">
+        <Image
+          src="/images/trustbadges.png"
+          alt="Trust badges showing Transportation Included, Safety First Approach, and Specialized Curriculum Options"
+          width={600}
+          height={200}
+          className="w-full h-auto drop-shadow-lg"
+          sizes="(min-width: 640px) 400px, 300px"
+        />
+      </div>
+    </div>
   );
 }

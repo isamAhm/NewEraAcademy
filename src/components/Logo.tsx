@@ -1,11 +1,10 @@
 import Link from "next/link";
-import { ThreeFriendsMark } from "@/components/icons/SunburstMotif";
+import Image from "next/image";
 import { siteConfig } from "@/lib/site";
 
 /**
- * Text-based logotype placeholder. NEA's real logo (three child silhouettes
- * + sunburst) only exists today as a watermarked stock mockup — see
- * PLACEHOLDERS.md. This stands in until final logo artwork is supplied.
+ * New Era Academy logo featuring three colorful child silhouettes 
+ * with sunburst design and green text branding.
  */
 export function Logo({ compact = false }: { compact?: boolean }) {
   return (
@@ -14,12 +13,19 @@ export function Logo({ compact = false }: { compact?: boolean }) {
       className="group flex items-center gap-3 rounded-sm"
       aria-label={`${siteConfig.name} — home`}
     >
-      <ThreeFriendsMark className="h-8 w-[3.25rem] shrink-0 transition-transform duration-200 group-hover:-translate-y-0.5" />
+      <div className="relative h-12 w-12 shrink-0 transition-transform duration-200 group-hover:-translate-y-0.5 sm:h-14 sm:w-14">
+        <Image
+          src="/images/logo.png"
+          alt="New Era Academy Logo"
+          fill
+          className="object-contain"
+          sizes="(max-width: 640px) 48px, 56px"
+        />
+      </div>
       <span className="flex flex-col leading-tight">
         <span
-          className={`font-heading font-semibold tracking-tight text-brand-green ${
-            compact ? "text-lg" : "text-xl sm:text-2xl"
-          }`}
+          className={`font-heading font-semibold tracking-tight text-brand-blue ${compact ? "text-lg" : "text-xl sm:text-2xl"
+            }`}
         >
           New Era Academy
         </span>

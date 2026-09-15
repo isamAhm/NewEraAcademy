@@ -70,7 +70,7 @@ export function Hero({
             </p>
           )}
 
-          <SubHeading
+          {/* <SubHeading
             className={`font-heading font-semibold leading-tight text-white drop-shadow-sm ${
               title
                 ? "mt-8 text-2xl sm:text-3xl"
@@ -85,7 +85,7 @@ export function Hero({
           </p>
           <div className="mt-8">
             <CtaLink href="/schedule-tour">Schedule A Tour</CtaLink>
-          </div>
+          </div> */}
         </div>
 
         <TrustBadges tone="onDark" className="mt-14" />
