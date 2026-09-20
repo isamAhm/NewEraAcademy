@@ -31,7 +31,6 @@ export async function POST(request: Request) {
   const name = get("name");
   const email = get("email");
   const phone = get("phone");
-  const location = get("location");
   const position = get("position");
   const startDate = get("startDate");
   const comments = get("comments");
@@ -47,9 +46,6 @@ export async function POST(request: Request) {
   }
   if (!isValidPhone(phone)) {
     errors.push("A valid phone number is required.");
-  }
-  if (!isNonEmpty(location)) {
-    errors.push("A location is required.");
   }
   if (!isNonEmpty(position) || !isWithinLength(position, MAX_TEXT_LENGTH)) {
     errors.push("A position is required.");
@@ -96,7 +92,6 @@ export async function POST(request: Request) {
         `Name: ${name}`,
         `Email: ${email}`,
         `Phone: ${phone}`,
-        `Location: ${location}`,
         `Position: ${position}`,
         `Preferred Start Date: ${startDate}`,
         `Mailing list opt-in: ${mailingList}`,

@@ -95,7 +95,7 @@ export function Hero({
           </div> */}
         </div>
 
-        <TrustBadges tone="onDark" className="mt-14" />
+        {/* <TrustBadges tone="onDark" className="mt-14" /> */}
       </div>
     </section>
   );

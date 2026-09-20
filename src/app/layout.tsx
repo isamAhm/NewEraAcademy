@@ -28,19 +28,19 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/images/icon2.png',
+        url: '/images/logo.JPG',
         sizes: '32x32',
         type: 'image/png',
       },
       {
-        url: '/images/icon2.png',
+        url: '/images/logo.JPG',
         sizes: '16x16',
         type: 'image/png',
       }
     ],
     apple: [
       {
-        url: '/images/icon2.png',
+        url: '/images/logo.JPG',
         sizes: '180x180',
         type: 'image/png',
       }
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: '/images/logo.png',
+        url: '/images/mainlogo.png',
         width: 1200,
         height: 630,
         alt: 'New Era Academy Logo',
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: siteConfig.name,
     description: siteConfig.description,
-    images: ['/images/logo.png'],
+    images: ['/images/mainlogo.png'],
   },
 };
 

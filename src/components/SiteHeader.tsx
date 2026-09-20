@@ -28,9 +28,8 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 aria-current={isActive ? "page" : undefined}
-                className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors duration-150 hover:bg-brand-green-light hover:text-brand-green-dark ${
-                  isActive ? "bg-brand-green-light text-brand-green-dark" : "text-ink"
-                }`}
+                className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors duration-150 hover:bg-brand-green-light hover:text-brand-green-dark ${isActive ? "bg-brand-green-light text-brand-green-dark" : "text-ink"
+                  }`}
               >
                 {item.label}
               </Link>
@@ -38,11 +37,11 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <div className="hidden lg:block">
+        {/* <div className="hidden lg:block">
           <CtaLink href="/schedule-tour" className="!px-5 !py-2.5 text-sm">
             Schedule A Tour
           </CtaLink>
-        </div>
+        </div> */}
 
         <button
           type="button"
@@ -90,9 +89,8 @@ export function SiteHeader() {
                     href={item.href}
                     aria-current={isActive ? "page" : undefined}
                     onClick={() => setMenuOpen(false)}
-                    className={`block rounded-lg px-3 py-2.5 text-base font-semibold transition-colors duration-150 hover:bg-brand-green-light hover:text-brand-green-dark ${
-                      isActive ? "bg-brand-green-light text-brand-green-dark" : "text-ink"
-                    }`}
+                    className={`block rounded-lg px-3 py-2.5 text-base font-semibold transition-colors duration-150 hover:bg-brand-green-light hover:text-brand-green-dark ${isActive ? "bg-brand-green-light text-brand-green-dark" : "text-ink"
+                      }`}
                   >
                     {item.label}
                   </Link>

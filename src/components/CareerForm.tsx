@@ -18,7 +18,6 @@ type FieldName =
   | "name"
   | "email"
   | "phone"
-  | "location"
   | "position"
   | "startDate"
   | "resume"
@@ -26,9 +25,8 @@ type FieldName =
 
 type Errors = Partial<Record<FieldName, string>>;
 
-// Kept as a single option today; add more here when NEA opens new
-// locations — the <select> and validation both stay unchanged.
-const LOCATIONS = ["Columbus, Ohio — 2169 Cleveland Ave"];
+// Location removed - only Columbus location available
+// const LOCATIONS = ["Columbus, Ohio — 2169 Cleveland Ave"];
 
 export function CareerForm() {
   const [status, setStatus] = useState<SubmitStatus>("idle");
@@ -48,9 +46,6 @@ export function CareerForm() {
     }
     if (!isValidPhone(get("phone"))) {
       nextErrors.phone = "Please enter a valid phone number.";
-    }
-    if (!isNonEmpty(get("location"))) {
-      nextErrors.location = "Please select a location.";
     }
     if (!isNonEmpty(get("position")) || !isWithinLength(get("position"), MAX_TEXT_LENGTH)) {
       nextErrors.position = "Please enter the position you're interested in.";
@@ -143,29 +138,6 @@ export function CareerForm() {
           />
         </FormField>
       </div>
-
-      <FormField
-        id="career-location"
-        label="Which location are you interested in?"
-        required
-        error={errors.location}
-      >
-        <select
-          id="career-location"
-          name="location"
-          required
-          aria-required="true"
-          aria-invalid={Boolean(errors.location)}
-          defaultValue={LOCATIONS[0]}
-          className={inputClasses(Boolean(errors.location))}
-        >
-          {LOCATIONS.map((location) => (
-            <option key={location} value={location}>
-              {location}
-            </option>
-          ))}
-        </select>
-      </FormField>
 
       <FormField
         id="career-position"

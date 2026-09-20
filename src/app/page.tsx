@@ -7,7 +7,7 @@ import { ParallaxShape } from "@/components/ParallaxShape";
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "New Era Academy is dedicated to nurturing young minds and fostering lifelong learning in Columbus, Ohio — serving children ages 6 weeks to 13 years.",
+    "New Era Academy is dedicated to nurturing young minds and fostering lifelong learning in Columbus, Ohio — serving children ages 6 weeks to 12 years.",
 };
 
 const missionPoints = [

@@ -15,7 +15,7 @@ export function Logo({ compact = false }: { compact?: boolean }) {
     >
       <div className="relative h-16 w-16 shrink-0 transition-transform duration-200 group-hover:-translate-y-0.5 sm:h-20 sm:w-20">
         <Image
-          src="/images/logo.png"
+          src="/images/mainlogo.png"
           alt="New Era Academy Logo"
           fill
           className="object-contain"

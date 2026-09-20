@@ -41,7 +41,8 @@ export function SiteFooter() {
               {contactInfo.locationName}
             </h2>
             <address className="mt-3 flex flex-col gap-2 text-sm not-italic text-ink-soft">
-              <span>{contactInfo.addressFull}</span>
+              <span>{contactInfo.address.line1}</span>
+              <span>{contactInfo.address.city}, {contactInfo.address.state} {contactInfo.address.zip}</span>
               <a
                 href={contactInfo.phoneHref}
                 className="transition-colors duration-150 hover:text-brand-green-dark"

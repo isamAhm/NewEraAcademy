@@ -7,7 +7,7 @@ import { ParallaxShape } from "@/components/ParallaxShape";
 export const metadata: Metadata = {
   title: "Service",
   description:
-    "New Era Academy provides a warm, nurturing environment for children ages 6 weeks to 13 years across the Columbus, Ohio area.",
+    "New Era Academy provides a warm, nurturing environment for children ages 6 weeks to 12 years across the Columbus, Ohio area.",
 };
 
 export default function ServicePage() {
@@ -18,8 +18,8 @@ export default function ServicePage() {
           PLACEHOLDER PHOTO (Unsplash, free license) — see PLACEHOLDERS.md. */}
       <Hero className="text-justify"
         title="Serving The Columbus Area"
-        intro="At New Era Academy, care is at the heart of everything we do. We provide a warm, nurturing environment for children ages 6 weeks to 13 years, a place where every child feels seen, valued, and celebrated. Our focus is on building a loving, inclusive community that embraces diversity and honors each child's unique background, personality, and potential."
-        imageSrc="/images/placeholders/hero-service-caregiver-child-coloring2.jpeg"
+        intro="At New Era Academy, care is at the heart of everything we do. We provide a warm, nurturing environment for children ages 6 weeks to 12 years, a place where every child feels seen, valued, and celebrated. Our focus is on building a loving, inclusive community that embraces diversity and honors each child's unique background, personality, and potential."
+        imageSrc="/images/placeholders/hero-service-caregiver-child-coloring.JPG"
         imageAlt="Placeholder photo — a caregiver and a toddler colouring together at a small table. Replace with a real New Era Academy campus photo before launch."
       />
 
@@ -54,7 +54,7 @@ export default function ServicePage() {
               id="curriculum-heading"
               className="font-heading text-2xl font-semibold text-brand-green sm:text-3xl"
             >
-              Education Curriculum
+              Education Curriculum 📚
             </h2>
             <p className="mt-4 text-base leading-relaxed text-ink-soft sm:text-lg text-justify">
               Our curriculum is thoughtfully designed to engage students in a
@@ -73,7 +73,7 @@ export default function ServicePage() {
             />
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-lg">
               <Image
-                src="/images/placeholders/service-curriculum-blocks.jpg"
+                src="/images/placeholders/service-curriculum-blocks.JPG"
                 alt="Placeholder photo — a child's hands stacking colorful building blocks. Replace with a real New Era Academy classroom activity photo."
                 fill
                 sizes="(min-width: 1024px) 32rem, 90vw"
@@ -106,13 +106,43 @@ export default function ServicePage() {
               id="empowering-heading"
               className="font-heading text-2xl font-semibold text-brand-green sm:text-3xl"
             >
-              Empowering Children
+              Empowering Children ❤️‍🔥
             </h2>
             <p className="mt-4 text-base leading-relaxed text-ink-soft sm:text-lg text-justify">
               {
                 "Our trained staff ensures that every child feels safe and valued, fostering a sense of belonging that is essential for personal development. We provide individualized support tailored to each student's unique needs, helping them overcome challenges and celebrate their successes. We offer a range of programs—from art and music to sports and technology—empowering students to explore diverse interests and develop well-rounded skills. These activities not only provide fun and engagement but also encourage teamwork, discipline, and resilience."
               }
             </p>
+          </Reveal>
+        </div>
+      </section>
+      <section aria-labelledby="curriculum-heading">
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
+          <Reveal from="left">
+            <h2
+              id="curriculum-heading"
+              className="font-heading text-2xl font-semibold text-brand-green sm:text-3xl"
+            >
+              PROVIDING TRANSPORTATION 🚌
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-ink-soft sm:text-lg text-justify">
+              New Era Academy provides transportation including picking up or dropping off children between home and the center as well as providing rides for planned field trips using vans or mini-buses.
+            </p>
+          </Reveal>
+          <Reveal from="right" className="relative">
+            <ParallaxShape
+              className="-right-20 -top-20 h-[22rem] w-[22rem] sm:-right-24 sm:h-[26rem] sm:w-[26rem]"
+              colorClass="text-brand-magenta/15"
+            />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-lg">
+              <Image
+                src="/images/placeholders/IMG_0156.JPG"
+                alt="Placeholder photo — a child's hands stacking colorful building blocks. Replace with a real New Era Academy classroom activity photo."
+                fill
+                sizes="(min-width: 1024px) 32rem, 90vw"
+                className="object-cover"
+              />
+            </div>
           </Reveal>
         </div>
       </section>

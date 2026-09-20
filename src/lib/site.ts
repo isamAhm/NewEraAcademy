@@ -9,7 +9,7 @@ export const siteConfig = {
   shortName: "NEA",
   tagline: "Place to Learn and grow",
   description:
-    "New Era Academy is dedicated to nurturing young minds and fostering lifelong learning, serving children ages 6 weeks to 13 years in Columbus, Ohio.",
+    "New Era Academy is dedicated to nurturing young minds and fostering lifelong learning, serving children ages 6 weeks to 12 years in Columbus, Ohio.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.neweraacademy.org",
 };
 
