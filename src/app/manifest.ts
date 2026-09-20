@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
     return {
         name: 'New Era Academy',
         short_name: 'NEA',
-        description: 'New Era Academy - Place to Learn and Grow. Dedicated to nurturing young minds and fostering lifelong learning.',
+        description: 'New Era Academy - Center for Learning and Growth. Dedicated to nurturing young minds and fostering lifelong learning.',
         start_url: '/',
         display: 'standalone',
         background_color: '#ffffff',

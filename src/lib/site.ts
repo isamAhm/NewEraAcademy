@@ -7,7 +7,7 @@
 export const siteConfig = {
   name: "New Era Academy",
   shortName: "NEA",
-  tagline: "Place to Learn and grow",
+  tagline: "Center for Learning and Growth",
   description:
     "New Era Academy is dedicated to nurturing young minds and fostering lifelong learning, serving children ages 6 weeks to 12 years in Columbus, Ohio.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.neweraacademy.org",
