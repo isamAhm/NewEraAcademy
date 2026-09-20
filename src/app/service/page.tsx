@@ -13,13 +13,10 @@ export const metadata: Metadata = {
 export default function ServicePage() {
   return (
     <div className="mx-auto flex max-w-6xl flex-col gap-16 px-4 pb-10 sm:px-6 sm:pb-14">
-      {/* Hero banner: lead headline, intro, sub-headline, CTA and trust badges
-          all overlaid on one full-bleed photo, starting directly below the nav.
-          PLACEHOLDER PHOTO (Unsplash, free license) — see PLACEHOLDERS.md. */}
       <Hero className="text-justify"
         title="Serving The Columbus Area"
         intro="At New Era Academy, care is at the heart of everything we do. We provide a warm, nurturing environment for children ages 6 weeks to 12 years, a place where every child feels seen, valued, and celebrated. Our focus is on building a loving, inclusive community that embraces diversity and honors each child's unique background, personality, and potential."
-        imageSrc="/images/placeholders/hero-service-caregiver-child-coloring.JPG"
+        imageSrc="/images/hero-service-caregiver-child-coloring.JPG"
         imageAlt="Placeholder photo — a caregiver and a toddler colouring together at a small table. Replace with a real New Era Academy campus photo before launch."
       />
 
@@ -73,7 +70,7 @@ export default function ServicePage() {
             />
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-lg">
               <Image
-                src="/images/placeholders/service-curriculum-blocks.JPG"
+                src="/images/service-curriculum-blocks.JPG"
                 alt="Placeholder photo — a child's hands stacking colorful building blocks. Replace with a real New Era Academy classroom activity photo."
                 fill
                 sizes="(min-width: 1024px) 32rem, 90vw"
@@ -93,7 +90,7 @@ export default function ServicePage() {
             />
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-lg">
               <Image
-                src="/images/placeholders/service-empowering-art.jpeg"
+                src="/images/service-empowering-art.jpeg"
                 alt="Placeholder photo — a child's hand painting a colorful picture. Replace with a real New Era Academy art activity photo."
                 fill
                 sizes="(min-width: 1024px) 32rem, 90vw"
@@ -136,7 +133,7 @@ export default function ServicePage() {
             />
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-lg">
               <Image
-                src="/images/placeholders/IMG_0156.JPG"
+                src="/images/IMG_0156.JPG"
                 alt="Placeholder photo — a child's hands stacking colorful building blocks. Replace with a real New Era Academy classroom activity photo."
                 fill
                 sizes="(min-width: 1024px) 32rem, 90vw"

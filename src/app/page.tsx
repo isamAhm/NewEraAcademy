@@ -45,7 +45,7 @@ export default function HomePage() {
       <Hero
         title="Early Child Education for Continuous Success"
         intro="New Era Academy is dedicated to nurturing young minds and fostering lifelong learning. At our academy, we believe that every child has the potential to shine, and we strive to create a secure, stimulating environment that encourages exploration and growth."
-        imageSrc="/images/placeholders/hero-home-banner-children-playing.jpeg"
+        imageSrc="/images/hero-home-banner-children-playing.jpeg"
         imageAlt="Placeholder photo — young children playing with toys on the floor of a bright early-learning room while caregivers sit with them. Replace with a real New Era Academy campus photo before launch."
       />
 
@@ -91,7 +91,7 @@ export default function HomePage() {
             />
             <div className="relative aspect-square overflow-hidden rounded-[55%_45%_45%_55%/45%_55%_45%_55%] shadow-lg">
               <Image
-                src="/images/placeholders/home-mission-toddler-camera.jpeg"
+                src="/images/home-mission-toddler-camera.jpeg"
                 alt="Placeholder photo — a toddler playing with a toy camera in a bright, colorful playroom. Replace with a real New Era Academy classroom photo."
                 fill
                 sizes="(min-width: 1024px) 24rem, 80vw"
