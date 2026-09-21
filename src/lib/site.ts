@@ -24,7 +24,7 @@ export const contactInfo = {
   addressFull: "2169 Cleveland Ave, Columbus, Ohio 43211",
   phone: "(614) 826-3983",
   phoneHref: "tel:+16148263983",
-  email: "isam.ahmedh8@gmail.com",
+  email: "neweraacademy9@gmail.com",
   hours: [
     { days: "Monday to Friday", time: "8:00 AM – 10:00 PM" },
     { days: "Saturday to Sunday", time: "8:00 AM – 6:00 PM" },
