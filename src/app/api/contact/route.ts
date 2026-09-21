@@ -8,9 +8,11 @@ import {
   isValidEmail,
   isWithinLength,
 } from "@/lib/validation";
-import { contactInfo } from "@/lib/site";
 
 export const runtime = "nodejs";
+
+const SEND_FAILED_MESSAGE =
+  "We couldn't send your message right now. Please try again shortly.";
 
 export async function POST(request: Request) {
   let body: Record<string, unknown>;
@@ -44,9 +46,17 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: errors.join(" ") }, { status: 400 });
   }
 
+  const recipient = process.env.CONTACT_FORM_RECIPIENT_EMAIL?.trim();
+  if (!recipient) {
+    console.error(
+      "[api/contact] CONTACT_FORM_RECIPIENT_EMAIL is not set; refusing to send.",
+    );
+    return NextResponse.json({ error: SEND_FAILED_MESSAGE }, { status: 500 });
+  }
+
   try {
     await sendMail({
-      to: contactInfo.email,
+      to: recipient,
       replyTo: email,
       subject: `New contact form message from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
@@ -54,7 +64,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("[api/contact] Failed to send email", error);
     return NextResponse.json(
-      { error: "We couldn't send your message right now. Please try again shortly." },
+      { error: SEND_FAILED_MESSAGE },
       { status: 502 },
     );
   }

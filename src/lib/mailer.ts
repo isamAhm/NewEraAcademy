@@ -3,9 +3,11 @@ import nodemailer from "nodemailer";
 /**
  * Email delivery, stubbed behind environment variables.
  *
- * TODO(NEA): supply real SMTP credentials in production. Until SMTP_HOST is
- * set, submissions are logged to the server console instead of emailed so
- * the forms remain fully testable in development. See .env.example.
+ * TODO(NEA): supply real SMTP credentials in production. In development,
+ * until SMTP_HOST is set, submissions are logged to the server console
+ * instead of emailed so the forms remain fully testable. In production a
+ * missing SMTP_HOST is an error (sendMail throws) — it never silently
+ * succeeds. See .env.example.
  *
  * Swap this file for Resend if preferred later — every call site only
  * depends on the `sendMail` function below.
@@ -51,7 +53,14 @@ export async function sendMail(input: SendMailInput): Promise<void> {
   const from = process.env.MAIL_FROM || "no-reply@neweraacademy.org";
 
   if (!transporter) {
-    // Stub mode — no SMTP credentials configured yet.
+    // Fail closed in production: a missing SMTP_HOST must surface as a send
+    // failure (the routes' catch blocks return the generic error) rather than
+    // report success for an email that was never sent.
+    if (process.env.NODE_ENV === "production") {
+      throw new Error("SMTP_HOST is not configured; cannot send email.");
+    }
+
+    // Stub mode (development only) — no SMTP credentials configured yet.
     console.warn(
       "[mailer] STUB MODE — SMTP_HOST is not set, email was not sent. " +
         "Set SMTP_HOST/SMTP_PORT/SMTP_USER/SMTP_PASSWORD in .env to enable real delivery.",

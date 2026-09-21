@@ -1,11 +1,8 @@
 import Image from "next/image";
-import { CtaLink } from "@/components/CtaButton";
-import { TrustBadges } from "@/components/TrustBadges";
 import { HeroSparkles } from "@/components/HeroSparkles";
 import { WavyBottom } from "@/components/WavyBottom";
 
 type HeroProps = {
-  as?: "h1" | "h2";
   title?: string;
   intro?: string;
   imageSrc: string;
@@ -14,24 +11,20 @@ type HeroProps = {
 };
 
 /**
- * Full-bleed photo banner with everything overlaid on a dark scrim: an
- * optional lead headline + intro (the Home page's opening copy), the
- * "A Specially Curated Educational Journey" sub-headline, the Schedule A
- * Tour CTA, and the trust badges near the bottom.
+ * Full-bleed photo banner with an optional lead headline + intro (the Home
+ * page's opening copy) overlaid on a dark scrim.
  *
  * The section breaks out of its parent's max-width with a 100vw margin
  * trick; `body { overflow-x: clip }` in globals.css absorbs the scrollbar
  * overhang that creates (clip, not hidden, so the sticky header still works).
  */
 export function Hero({
-  as = "h2",
   title,
   intro,
   imageSrc,
   imageAlt,
   className = "",
 }: HeroProps) {
-  const SubHeading = title ? "h2" : as;
   return (
     <section
       className={`relative left-1/2 right-1/2 -mx-[50vw] w-screen overflow-hidden ${className}`}
@@ -76,26 +69,7 @@ export function Hero({
               {intro}
             </p>
           )}
-
-          {/* <SubHeading
-            className={`font-heading font-semibold leading-tight text-white drop-shadow-sm ${
-              title
-                ? "mt-8 text-2xl sm:text-3xl"
-                : "text-3xl sm:text-4xl lg:text-5xl"
-            }`}
-          >
-            A Specially Curated Educational Journey
-          </SubHeading>
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-white/90 sm:text-lg">
-            Come see our classrooms, meet our teachers, and feel the warmth
-            of the New Era Academy community for yourself.
-          </p>
-          <div className="mt-8">
-            <CtaLink href="/schedule-tour">Schedule A Tour</CtaLink>
-          </div> */}
         </div>
-
-        {/* <TrustBadges tone="onDark" className="mt-14" /> */}
       </div>
     </section>
   );

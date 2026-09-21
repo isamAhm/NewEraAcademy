@@ -4,7 +4,6 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
-import { CtaLink } from "@/components/CtaButton";
 import { navItems } from "@/lib/site";
 
 export function SiteHeader() {
@@ -36,12 +35,6 @@ export function SiteHeader() {
             );
           })}
         </nav>
-
-        {/* <div className="hidden lg:block">
-          <CtaLink href="/schedule-tour" className="!px-5 !py-2.5 text-sm">
-            Schedule A Tour
-          </CtaLink>
-        </div> */}
 
         <button
           type="button"
